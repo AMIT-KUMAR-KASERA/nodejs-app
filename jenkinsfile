@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs "NodeJS"  // Ensure you have configured NodeJS tool in Jenkins global settings
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git ''
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                // Add your test command here, if available
+                sh 'echo "No tests available"'
+            }
+        }
+        stage('Run') {
+            steps {
+                sh 'node index.js'
+            }
+        }
+    }
+}
