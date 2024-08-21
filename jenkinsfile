@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs "Node"  // Ensure you have configured NodeJS tool in Jenkins global settings
+        nodejs "NodeJS"  // Ensure you have configured NodeJS tool in Jenkins global settings
     }
 
     stages {
